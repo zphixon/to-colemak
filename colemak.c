@@ -27,8 +27,6 @@ int main()
             ++i;
         }
 
-        printf("%s", strcmp(test, input) ? "true\n" : "false\n");
-
         to_colemak(test);
         printf("%s\t->\t%s\t%d steps\n", input, test, i);
 

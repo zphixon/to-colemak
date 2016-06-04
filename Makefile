@@ -16,3 +16,7 @@ install: colemak.c
 	mv bin/to-colemak /usr/bin/to-colemak
 	rm -rf bin/
 
+debug: colemak.c
+	mkdir -p bin
+	$(CC) $(CFLAGS) -g $(LIBS) -o bin/to-colemak colemak.c
+
