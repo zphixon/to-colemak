@@ -20,3 +20,4 @@ debug: colemak.c
 	mkdir -p bin
 	$(CC) $(CFLAGS) -g $(LIBS) -o bin/to-colemak colemak.c
 
+
