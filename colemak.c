@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <readline/readline.h>
@@ -9,6 +10,8 @@ int main()
     char* input;
     char* test = "";
     int i;
+    int size_di = 0;
+    int size_dt = 0;
 
     for (;;) {
         input = readline("");
@@ -18,6 +21,9 @@ int main()
 
         test = malloc(sizeof(input));
         strcpy(test, input);
+
+        size_di = strlen(input);
+        size_dt = strlen(test);
 
         to_colemak(test);
 
