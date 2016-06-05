@@ -9,9 +9,7 @@ int main()
 {
     char* input;
     char* test = "";
-    int i;
-    int size_di = 0;
-    int size_dt = 0;
+    int i, counting = 0;
 
     for (;;) {
         input = readline("");
@@ -19,22 +17,31 @@ int main()
         if (!input)
             break;
 
-        test = malloc(sizeof(input));
+        test = malloc(sizeof(input) * strlen(input));
         strcpy(test, input);
 
-        size_di = strlen(input);
-        size_dt = strlen(test);
-
         to_colemak(test);
 
-        i = 0;
-        while (strcmp(test, input)) {
-            to_colemak(test);
-            ++i;
+        /* strcmp is acting opposite as expected */
+        if (!strcmp(input, "__count__")) {
+            if (counting)
+                counting = 0;
+            else
+                counting = 1;
         }
 
-        to_colemak(test);
-        printf("%s\t->\t%s\t%d steps\n", input, test, i);
+        if (counting) {
+            i = 0;
+            while (strcmp(test, input)) {
+                to_colemak(test);
+                ++i;
+            }
+
+            to_colemak(test);
+            printf("%s\t->\t%s\t%d steps\n", input, test, i);
+        } else {
+            printf("%s\n", test);
+        }
 
         free(input);
         free(test);
