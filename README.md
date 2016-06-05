@@ -32,14 +32,14 @@ asdfghjkl;
 arstdhneio
 __count__
 __count__	->	__cylkg__	41 steps
-j;w [K[K[K[Kj;w wk ask c;ijfk[K[K[K[K[K[K[K[K[K[Kask c;ijfljt fhk dfkrd
+j;w wk ask c;ijfljt fhk dfkrd
 j;w wk ask c;ijfljt fhk dfkrd	->	now we are counting the steps	41 steps
 klfhks 13 ;s 41
 klfhks 13 ;s 41	->	either 13 or 41	41 steps
-dr[K[Kdfkrd
+dfkrd
 dfkrd	->	steps	13 steps
 lf dkkmd f; c;sskdr;jg wlfh ukjthf
 lf dkkmd f; c;sskdr;jg wlfh ukjthf	->	it seems to correspond with lenght	41 steps
-*ukjth[Kfh
+*ukjtfh
 *ukjtfh	->	*length	41 steps
 ```
