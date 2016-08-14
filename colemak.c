@@ -1,3 +1,6 @@
+/* to-colemak - (c) 2016 Zack Hixon
+ * See LICENSE.txt for more details */
+
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
