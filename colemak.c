@@ -1,34 +1,27 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <readline/readline.h>
+#include "linenoise/linenoise.h"
 
 void to_colemak(char* qwerty);
 
-int main()
+int main(int argc, char* argv[])
 {
     char* input;
     char* test = "";
-    int i, counting = 0;
+    int i, counting;
 
-    for (;;) {
-        input = readline("");
+    if (argc == 2 && !strcmp(argv[1], "--count"))
+        counting = 1;
+    else
+        counting = 0;
 
-        if (!input)
-            break;
+    while ((input = linenoise("")) != NULL) {
 
         test = malloc(sizeof(input) * strlen(input));
         strcpy(test, input);
 
         to_colemak(test);
-
-        /* strcmp is acting opposite as expected */
-        if (!strcmp(input, "__count__")) {
-            if (counting)
-                counting = 0;
-            else
-                counting = 1;
-        }
 
         if (counting) {
             i = 0;
@@ -43,7 +36,7 @@ int main()
             printf("%s\n", test);
         }
 
-        free(input);
+        linenoiseFree(input);
         free(test);
     }
 

@@ -4,7 +4,7 @@ LIBS = -lreadline
 
 all: colemak.c
 	mkdir -p bin
-	$(CC) $(CFLAGS) $(LIBS) -o bin/to-colemak colemak.c
+	$(CC) $(CFLAGS) $(LIBS) -o bin/to-colemak colemak.c linenoise/linenoise.c
 
 clean:
 	rm -rf bin/
@@ -12,11 +12,11 @@ clean:
 
 install: colemak.c
 	mkdir -p bin
-	$(CC) $(CFLAGS) $(LIBS) -o bin/to-colemak colemak.c
+	$(CC) $(CFLAGS) $(LIBS) -o bin/to-colemak colemak.c linenoise/linenoise.c
 	mv bin/to-colemak /usr/bin/to-colemak
 	rm -rf bin/
 
 debug: colemak.c
 	mkdir -p bin
-	$(CC) $(CFLAGS) -g $(LIBS) -o bin/to-colemak colemak.c
+	$(CC) $(CFLAGS) -g $(LIBS) -o bin/to-colemak colemak.c linenoise/linenoise.c
 
