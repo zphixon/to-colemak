@@ -14,13 +14,13 @@ neat outcome that I didn't expect.
 
 ##how to use
 
-First, compile it. This program requires GNU readline:
+First, compile it. This program does not have any external dependencies:
 
 `make [install | debug]`
 
 Then run it:
 
-`[bin/]to-colemak`
+`[bin/]to-colemak [--count|-c]`
 
 When you type some text and press enter, you will see your input converted to
 colemak:
@@ -28,18 +28,29 @@ colemak:
 ```
 asdf
 arst
-asdfghjkl;
-arstdhneio
-__count__
-__count__	->	__cylkg__	41 steps
-j;w wk ask c;ijfljt fhk dfkrd
-j;w wk ask c;ijfljt fhk dfkrd	->	now we are counting the steps	41 steps
-klfhks 13 ;s 41
-klfhks 13 ;s 41	->	either 13 or 41	41 steps
-dfkrd
-dfkrd	->	steps	13 steps
-lf dkkmd f; c;sskdr;jg wlfh ukjthf
-lf dkkmd f; c;sskdr;jg wlfh ukjthf	->	it seems to correspond with lenght	41 steps
-*ukjtfh
-*ukjtfh	->	*length	41 steps
+fhld ld a fkdf.
+this is a test.
+Hkuu;, w;sug!
+Hello, world!
+H;w ask o;i f;gao?
+How are you today?
 ```
+
+With `-c/--count`
+
+```
+asdf
+asdf    ->      arst    13 steps
+fhld ld a fkdf.
+fhld ld a fkdf. ->      this is a test. 41 steps
+Hkuu;, w;sug!
+Hkuu;, w;sug!   ->      Hello, world!   41 steps
+H;w ask o;i g;ljt?
+H;w ask o;i g;ljt?      ->      How are you doing?      41 steps
+```
+
+##license
+
+This program is licensed under the MIT license. Additionally, linenoise is
+licensed under its own license that I can't be bothered to look up.
+

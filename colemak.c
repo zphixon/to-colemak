@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
     char* test = "";
     int i, counting;
 
-    if (argc == 2 && !strcmp(argv[1], "--count"))
+    if (argc == 2 && (!strcmp(argv[1], "--count") || !strcmp(argv[1], "-c")))
         counting = 1;
     else
         counting = 0;
